@@ -112,7 +112,7 @@ return app.Run(ctx)
 **Prerequisites:** Go 1.26+, and optionally [golangci-lint](https://golangci-lint.run/) v2 and Docker.
 
 ```bash
-git clone https://github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template.git my-service
+git clone https://github.com/Mrf-LuckyBoy/hook-relay.git my-service
 cd my-service
 cp .env.example .env   # optional
 make run
@@ -163,7 +163,7 @@ A `.env` file is loaded if one exists. It's for local development only: **never 
 ### Rename the Go module
 
 ```bash
-OLD=github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template
+OLD=github.com/Mrf-LuckyBoy/hook-relay
 NEW=github.com/YourUsername/your-project-name
 
 go mod edit -module "$NEW"

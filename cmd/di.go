@@ -3,8 +3,8 @@ package main
 import (
 	"log/slog"
 
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/config"
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/platform/lifecycle"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/config"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/platform/lifecycle"
 )
 
 // BuildApp wires adapters -> services -> driving adapters and registers them

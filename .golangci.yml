@@ -22,4 +22,4 @@ formatters:
   settings:
     goimports:
       local-prefixes:
-        - github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template
+        - github.com/Mrf-LuckyBoy/hook-relay

@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/platform/lifecycle"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/platform/lifecycle"
 )
 
 var discard = slog.New(slog.NewTextHandler(io.Discard, nil))

@@ -50,7 +50,7 @@ package port
 import (
 	"context"
 
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/domain"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/domain"
 )
 
 // Driving port
@@ -73,8 +73,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/domain"
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/port"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/domain"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/port"
 )
 
 type orderService struct {
@@ -113,8 +113,8 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/domain"
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/port"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/domain"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/port"
 )
 
 func NewRouter(orders port.OrderService) http.Handler {
@@ -176,8 +176,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/domain"
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/port"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/domain"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/port"
 )
 
 // NewRouter returns a *gin.Engine, which implements http.Handler,
@@ -237,8 +237,8 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/domain"
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/port"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/domain"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/port"
 )
 
 // NewRouter returns an *echo.Echo, which implements http.Handler,
@@ -299,9 +299,9 @@ import (
 
 	"github.com/gofiber/fiber/v3"
 
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/domain"
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/port"
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/platform/lifecycle"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/domain"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/port"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/platform/lifecycle"
 )
 
 var _ lifecycle.Server = (*Server)(nil)
@@ -374,7 +374,7 @@ import (
 	"log/slog"
 	"time"
 
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/platform/lifecycle"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/platform/lifecycle"
 )
 
 var _ lifecycle.Server = (*Ticker)(nil)
@@ -433,8 +433,8 @@ import (
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
 
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/domain"
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/port"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/domain"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/port"
 )
 
 // NewPool connects and verifies the connection.
@@ -522,8 +522,8 @@ import (
 
 	"github.com/redis/go-redis/v9"
 
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/domain"
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/port"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/domain"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/port"
 )
 
 // NewClient connects and verifies the connection.
@@ -608,8 +608,8 @@ import (
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
 
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/domain"
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/port"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/domain"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/port"
 )
 
 // NewClient creates a client and makes sure the bucket exists.
@@ -694,14 +694,14 @@ import (
 	"log/slog"
 	"time"
 
-	rediscache "github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/adapters/cache/redis"
-	ginhandler "github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/adapters/handler/gin"
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/adapters/repository/postgres"
-	miniostorage "github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/adapters/storage/minio"
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/adapters/worker"
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/config"
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/core/service"
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/platform/lifecycle"
+	rediscache "github.com/Mrf-LuckyBoy/hook-relay/internal/adapters/cache/redis"
+	ginhandler "github.com/Mrf-LuckyBoy/hook-relay/internal/adapters/handler/gin"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/adapters/repository/postgres"
+	miniostorage "github.com/Mrf-LuckyBoy/hook-relay/internal/adapters/storage/minio"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/adapters/worker"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/config"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/core/service"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/platform/lifecycle"
 )
 
 func BuildApp(cfg *config.Config, logger *slog.Logger) (*lifecycle.App, error) {

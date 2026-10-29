@@ -12,7 +12,7 @@ import (
 
 	"github.com/joho/godotenv"
 
-	"github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template/internal/config"
+	"github.com/Mrf-LuckyBoy/hook-relay/internal/config"
 )
 
 func main() {

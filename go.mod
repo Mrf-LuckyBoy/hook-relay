@@ -1,4 +1,4 @@
-module github.com/Mrf-LuckyBoy/go-hexagonal-minimal-template
+module github.com/Mrf-LuckyBoy/hook-relay
 
 go 1.26.1
 
